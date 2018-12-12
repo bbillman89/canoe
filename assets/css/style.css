@@ -1,0 +1,14 @@
+html, body {
+    /* The image used */
+    background-image: url(../images/london2.jpg);
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  
+}
+
+.card {
+    background: #ffffff;
+}
