@@ -1,14 +1,7 @@
-html, body {
-    /* The image used */
-    background-image: url(../images/london2.jpg);
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-  
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.card {
-    background: #ffffff;
+#weatherimage {
+    width: 150px;
 }
