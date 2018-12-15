@@ -3,6 +3,10 @@
     color: rgb(0,137,207);
 }
 
+body {
+    margin-bottom: 75px;
+}
+
 nav {
     height: 100px;
 }
@@ -31,6 +35,15 @@ nav {
     height: 350px;
     background-image: url("../images/canoe_background.jpg");
     background-size: cover;
+}
+
+form label {
+    /* font-size: 20pt; */
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: rgb(0,137,207);
 }
 
 
