@@ -29,6 +29,7 @@
             <div id="spacer"></div>
             <div class="card opac border-0 rounded-0">
                 <div class="card-body">
+<<<<<<< HEAD
                     <form>
                         <div class="form-group mb-0">
                             <div class="row">
@@ -47,10 +48,31 @@
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" placeholder="" aria-label="Username"
                                             aria-describedby="basic-addon1">
+=======
+                        <form>
+                            <div class="form-group mb-0">
+                                <div class="row">
+                                    <!-- Weather Selection -->
+                                    <div class="col-6">
+                                        <label for="weather">Select Weather</label>
+                                        <select class="form-control" id="weather">
+                                            <option>sunny</option>
+                                            <option>rainy</option>
+                                            <option>snowy</option>
+                                        </select>
+                                    </div>
+                                    <!-- Current Location Input -->
+                                    <div class="col-6">
+                                        <label for="location">Select Location</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" id="select-location" class="form-control" placeholder="current location" aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+>>>>>>> master
                                     </div>
                                 </div>
                             </div>
 
+<<<<<<< HEAD
                             <div class="row">
                                 <!-- Trip Type Selection -->
                                 <div class="col-6">
@@ -59,6 +81,28 @@
                                         <option>round-trip</option>
                                         <option>one-way</option>
                                     </select>
+=======
+                                <div class="row">
+                                    <!-- Departure Date Selection -->
+                                    <div class="col-3">
+                                        <label for="flight-type">Departure Date</label>
+                                        <input type="date" class="form-control" id="dep-date">
+                                    </div>
+                                    <!-- Return Date Selection -->
+                                    <div class="col-3">
+                                        <label for="flight-type">Return Date</label>
+                                        <input type="date" class="form-control" id="return-date">
+                                    </div>
+                                    <!-- Flight Class Selection -->
+                                    <div class="col-6">
+                                        <label for="flight-class">Flight Class</label>
+                                        <select class="form-control" id="flight-class">
+                                            <option>economy</option>
+                                            <option>business</option>
+                                            <option>first-class</option>
+                                        </select>
+                                    </div>
+>>>>>>> master
                                 </div>
                                 <!-- Flight Class Selection -->
                                 <div class="col-6">
@@ -71,9 +115,17 @@
                                 </div>
                             </div>
 
+<<<<<<< HEAD
                             <div class="row justify-content-center px-3 mt-3">
                                 <div class="col-10">
                                     <a href="#" class="btn btn-primary btn-block border-0 rounded-0">search</a>
+=======
+                                    <div class="row justify-content-center px-3 mt-3">
+                                        <div class="col-10">
+                                            <a href="#" id="search" class="btn btn-primary btn-block border-0 rounded-0">search</a>
+                                        </div>
+                                    </div>
+>>>>>>> master
                                 </div>
                             </div>
                         </div>
@@ -178,8 +230,12 @@
 
 
         <!--SCRIPTS HERE-->
+<<<<<<< HEAD
         <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
 
+=======
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+>>>>>>> master
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"

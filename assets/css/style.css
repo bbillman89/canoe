@@ -1,5 +1,6 @@
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0,137,207);
 }
 
 nav {
@@ -44,12 +45,11 @@ nav {
 
 .resultinfo {
     padding-top: 60px;
-    padding-left: 60px;
-    color: rgb(0,137,207);
+    padding-left: 30px;
+    
 }
 
 #searchparameters {
-    color: rgb(0,137,207);
     text-align: center;
     padding-top: 20px;
     
