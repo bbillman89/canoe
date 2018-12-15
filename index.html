@@ -45,20 +45,21 @@
                                     <div class="col-6">
                                         <label for="location">Select Location</label>
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="" aria-label="Username"
-                                                aria-describedby="basic-addon1">
+                                            <input type="text" id="select-location" class="form-control" placeholder="current location" aria-label="Username" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <!-- Trip Type Selection -->
-                                    <div class="col-6">
-                                        <label for="flight-type">Flight Type</label>
-                                        <select class="form-control" id="flight-type">
-                                            <option>round-trip</option>
-                                            <option>one-way</option>
-                                        </select>
+                                    <!-- Departure Date Selection -->
+                                    <div class="col-3">
+                                        <label for="flight-type">Departure Date</label>
+                                        <input type="date" class="form-control" id="dep-date">
+                                    </div>
+                                    <!-- Return Date Selection -->
+                                    <div class="col-3">
+                                        <label for="flight-type">Return Date</label>
+                                        <input type="date" class="form-control" id="return-date">
                                     </div>
                                     <!-- Flight Class Selection -->
                                     <div class="col-6">
@@ -73,7 +74,7 @@
 
                                     <div class="row justify-content-center px-3 mt-3">
                                         <div class="col-10">
-                                            <a href="#" class="btn btn-primary btn-block border-0 rounded-0">search</a>
+                                            <a href="#" id="search" class="btn btn-primary btn-block border-0 rounded-0">search</a>
                                         </div>
                                     </div>
                                 </div>
