@@ -33,7 +33,6 @@ nav {
 }
 
 
-
 #weatherimage {
     width: 150px;
 }
@@ -42,9 +41,19 @@ nav {
     padding-top: 20px;
 }
 
-/* .col-2 {
+.resultinfo {
     padding-top: 60px;
     padding-left: 30px;
     color: rgb(0,137,207);
-} */
+}
 
+#searchparameters {
+    color: rgb(0,137,207);
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+#flightsbanner {
+    display: inline-block;
+}
