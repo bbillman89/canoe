@@ -34,8 +34,9 @@ nav {
 }
 
 
-#weatherimage {
-    width: 150px;
+.forecast {
+    width: 100px;
+    padding-left: 20px;
 }
 
 #resultRow {
@@ -56,4 +57,12 @@ nav {
 
 #flightsbanner {
     display: inline-block;
+}
+
+#flightNo {
+    font-weight: bold;
+}
+
+#returnFlightNo {
+    font-weight: bold;
 }
