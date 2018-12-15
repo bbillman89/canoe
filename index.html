@@ -29,60 +29,60 @@
             <div id="spacer"></div>
             <div class="card opac border-0 rounded-0">
                 <div class="card-body">
-                        <form>
-                            <div class="form-group mb-0">
-                                <div class="row">
-                                    <!-- Weather Selection -->
-                                    <div class="col-6">
-                                        <label for="weather">Select Weather</label>
-                                        <select class="form-control" id="weather">
-                                            <option>sunny</option>
-                                            <option>rainy</option>
-                                            <option>snowy</option>
-                                        </select>
-                                    </div>
-                                    <!-- Current Location Input -->
-                                    <div class="col-6">
-                                        <label for="location">Select Location</label>
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="" aria-label="Username"
-                                                aria-describedby="basic-addon1">
-                                        </div>
-                                    </div>
+                    <form>
+                        <div class="form-group mb-0">
+                            <div class="row">
+                                <!-- Weather Selection -->
+                                <div class="col-6">
+                                    <label for="weather">Select Weather</label>
+                                    <select class="form-control" id="weather">
+                                        <option>sunny</option>
+                                        <option>rainy</option>
+                                        <option>snowy</option>
+                                    </select>
                                 </div>
-
-                                <div class="row">
-                                    <!-- Trip Type Selection -->
-                                    <div class="col-6">
-                                        <label for="flight-type">Flight Type</label>
-                                        <select class="form-control" id="flight-type">
-                                            <option>round-trip</option>
-                                            <option>one-way</option>
-                                        </select>
-                                    </div>
-                                    <!-- Flight Class Selection -->
-                                    <div class="col-6">
-                                        <label for="flight-class">Flight Class</label>
-                                        <select class="form-control" id="flight-class">
-                                            <option>economy</option>
-                                            <option>business</option>
-                                            <option>first-class</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                    <div class="row justify-content-center px-3 mt-3">
-                                        <div class="col-10">
-                                            <a href="#" class="btn btn-primary btn-block border-0 rounded-0">search</a>
-                                        </div>
+                                <!-- Current Location Input -->
+                                <div class="col-6">
+                                    <label for="location">Select Location</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="" aria-label="Username"
+                                            aria-describedby="basic-addon1">
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+
+                            <div class="row">
+                                <!-- Trip Type Selection -->
+                                <div class="col-6">
+                                    <label for="flight-type">Flight Type</label>
+                                    <select class="form-control" id="flight-type">
+                                        <option>round-trip</option>
+                                        <option>one-way</option>
+                                    </select>
+                                </div>
+                                <!-- Flight Class Selection -->
+                                <div class="col-6">
+                                    <label for="flight-class">Flight Class</label>
+                                    <select class="form-control" id="flight-class">
+                                        <option>economy</option>
+                                        <option>business</option>
+                                        <option>first-class</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center px-3 mt-3">
+                                <div class="col-10">
+                                    <a href="#" class="btn btn-primary btn-block border-0 rounded-0">search</a>
+                                </div>
+                            </div>
+                        </div>
                 </div>
+                </form>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 
 
@@ -97,7 +97,7 @@
                 </h3>
             </div>
             <div class="col-2">
-                <h3 id="userLocation"> current location 
+                <h3 id="userLocation"> current location
                 </h3>
             </div>
             <div class="col-2">
@@ -111,41 +111,75 @@
         </div>
     </div>
 
-<!-- OK. This is our results card, with tabs. We're having difficult with the tabs doing what they're supposed to. -->
+    <!-- OK. This is our results card, with tabs. We're having difficult with the tabs doing what they're supposed to. -->
 
-<div class="container mt-5">
+    <div class="container mt-5">
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
-                    aria-controls="nav-home" aria-selected="true">Home</a>
+                    aria-controls="nav-home" aria-selected="true">D E P A R T U R E S</a>
                 <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
-                    aria-controls="nav-profile" aria-selected="false">Profile</a>
+                    aria-controls="nav-profile" aria-selected="false">R E T U R N S</a>
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="row" id="resultRow">
+
+                    <div class="resultinfo" class="col-2" id="selectbutton">
+                            <button type="button" class="btn btn-outline-primary">select</button>
+                    </div>
+                    <div class="resultinfo" class="col-2" id="flightDiv"> 
+                            <p id="flightNo">AA Flight 932</p> 
+                            <p id="flightDate">12/12/2018</p>
+                            <p id="flightTime">8:47AM</p>
+                        </div>
+                    <div class="resultinfo" class="col-2" id="priceDiv"> $695
+                    </div>
+                    <div class="resultinfo" class="col-2" id="cabinDiv"> Business Class
+                    </div>
+                    <div class="resultinfo" class="col-2" id="destinationDiv"> Cabo San Lucas, Bitch
+                    </div>
+                    
+                    <div class="resultinfo" class="col-4">
+                        <img class="forecast" id="forecast1" src="assets/images/sunimage.png">
+                        <img class="forecast" id="forecast2" src="assets/images/sunimage.png">
+                        <img class="forecast" id="forecast3" src="assets/images/sunimage.png">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="row" id="resultRow">
+
+                <div class="resultinfo" class="col-2" id="selectbutton">
+                        <button type="button" class="btn btn-outline-primary">select</button>
+                </div>
+                <div class="resultinfo" class="col-2" id="returnFlight"> 
+                    <p id="returnFlightNo">AA Flight 932</p> 
+                    <p id="returnDate">12/15/2018</p>
+                    <p id="returnTime">9:35AM</p>
+                    </div>
+                <div class="resultinfo" class="col-2" id="returnPrice"> $852
+                </div>
+                <div class="resultinfo" class="col-2" id="returnCabin"> Business Class
+                </div>
+                <div class="resultinfo" class="col-2" id="returnDestination"> Detroit, Loser
+                </div>
+                
+                <div class="resultinfo" class="col-4">
+                    <img class="forecast" id="forecast1" src="assets/images/snowflake-solid.svg">
+                    <img class="forecast" id="forecast2" src="assets/images/snowflake-solid.svg">
+                    <img class="forecast" id="forecast3" src="assets/images/snowflake-solid.svg">
+                </div>
+            </div></div>
         </div>
 
 
-        <div class="row" id="resultRow">
 
-            <div class="resultinfo" class="col-2" id="priceDiv"> $695
-            </div>
-            <div class="resultinfo" class="col-2" id="cabinDiv"> Business Class
-            </div>
-            <div class="resultinfo" class="col-2" id="destinationDiv"> Cabo San Lucas, Bitch
-            </div>
-            <div class="resultinfo" class="col-2" id="flightDiv"> Flight 882
-            </div>
-            <div class="col-4">
-                <img class="forecast" id="forecast1" src="assets/images/sunimage.png">
-                <img class="forecast" id="forecast2" src="assets/images/sunimage.png">
-                <img class="forecast" id="forecast3" src="assets/images/sunimage.png">
-            </div>
-        </div>
 
         <!--SCRIPTS HERE-->
+        <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
