@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>C A N O E</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -14,6 +14,7 @@
 
 <body>
 
+    <!-- First, the search function div -->
     <div class="container mt-5">
         <div class="card">
             <div class="card-body">
@@ -69,76 +70,78 @@
             </div>
         </div>
     </div>
-    <div class="container mt-5">
 
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
 
-            <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                    aria-selected="true">D E P A R T U R E S</a>
+    <!-- Now, the results div. -->
 
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="departures" role="tabpanel" aria-labelledby="home-tab">
-
-                        <div class="row" id="resultRow">
-                            <div class="col-3" id="weatherDiv">
-                                <!-- <span class="glyphicon glyphicon-sunglasses" aria-hidden="false"></span> -->
-                                <img id="weatherimage" src="assets/images/sunimage.png">
-                            </div>
-                            <div class="col-2" id="priceDiv"> $695
-                            </div>
-                            <div class="col-2" id="cabinDiv"> Business Class
-                            </div>
-                            <div class="col-2" id="destinationDiv"> Cabo San Lucas, Bitch
-                            </div>
-                            <div class="col-2" id="flightDiv"> Flight 882
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-
-            <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                    aria-selected="false">R E T U R N S</a>
-
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade" id="returns" role="tabpanel" aria-labelledby="profile-tab">
-
-                        <div class="row" id="resultRow">
-                            <div class="col-3" id="weatherDiv">
-                                <!-- <span class="glyphicon glyphicon-sunglasses" aria-hidden="false"></span> -->
-                                <img id="returns" src="assets/images/snowflake-solid.svg">
-                            </div>
-                                <div class="col-2" id="priceDiv"> $852
-                                </div>
-                                <div class="col-2" id="cabinDiv"> Business Class
-                                </div>
-                                <div class="col-2" id="destinationDiv"> Detroit, fool
-                                </div>
-                                <div class="col-2" id="flightDiv"> Flight 753
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </li>
-        </ul>
-
+    <div id="searchparameters">
+        <h1 id="flightsbanner">F L I G H T S</h1>
+        <!-- Here we will display the various parameters the user has chosen. -->
+        <div id="userparameters" class="row">
+            <div class="col-2 offset-2">
+                <h3 id="userWeather"> sunny
+                </h3>
+            </div>
+            <div class="col-2">
+                <h3 id="userLocation"> current location 
+                </h3>
+            </div>
+            <div class="col-2">
+                <h3 id="tripType"> round-trip
+                </h3>
+            </div>
+            <div class="col-2">
+                <h3 id="seatType"> economy
+                </h3>
+            </div>
+        </div>
     </div>
 
+    <div class="container mt-5">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                    aria-controls="nav-home" aria-selected="true">Home</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                    aria-controls="nav-profile" aria-selected="false">Profile</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                    aria-controls="nav-contact" aria-selected="false">Contact</a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+        </div>
 
-    <!--SCRIPTS HERE-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
-    <script src="assets/js/app.js"></script>
+
+        <div class="row" id="resultRow">
+
+            <div class="resultinfo" class="col-2" id="priceDiv"> $695
+            </div>
+            <div class="resultinfo" class="col-2" id="cabinDiv"> Business Class
+            </div>
+            <div class="resultinfo" class="col-2" id="destinationDiv"> Cabo San Lucas, Bitch
+            </div>
+            <div class="resultinfo" class="col-2" id="flightDiv"> Flight 882
+            </div>
+            <div class="col-4">
+                <img class="forecast" id="forecast1" src="assets/images/sunimage.png">
+                <img class="forecast" id="forecast2" src="assets/images/sunimage.png">
+                <img class="forecast" id="forecast3" src="assets/images/sunimage.png">
+            </div>
+        </div>
+
+        <!--SCRIPTS HERE-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+        <script src="assets/js/app.js"></script>
 </body>
 
 </html>
