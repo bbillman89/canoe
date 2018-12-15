@@ -2,17 +2,28 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#weatherimage {
-    width: 150px;
+.forecast {
+    width: 100px;
+    height: 100px;
 }
 
 #resultRow {
     padding-top: 20px;
 }
 
-.col-2 {
+.resultinfo {
     padding-top: 60px;
     padding-left: 30px;
     color: rgb(0,137,207);
 }
 
+#searchparameters {
+    color: rgb(0,137,207);
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+#flightsbanner {
+    display: inline-block;
+}
