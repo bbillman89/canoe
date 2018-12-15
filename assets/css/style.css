@@ -5,3 +5,14 @@
 #weatherimage {
     width: 150px;
 }
+
+#resultRow {
+    padding-top: 20px;
+}
+
+.col-2 {
+    padding-top: 60px;
+    padding-left: 30px;
+    color: rgb(0,137,207);
+}
+
