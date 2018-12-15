@@ -13,60 +13,74 @@
 </head>
 
 <body>
-
+    <nav class="row">
+        <div class="col-2 my-auto ml-5">
+            <img class="" src="assets/images/Canoe-logo.svg">
+        </div>
+        <div class="col-9 my-auto">
+            <ul class="m-0">
+                <li id="sign-in"><a href="#">sign in</a></li>
+            </ul>
+        </div>
+    </nav>
     <!-- First, the search function div -->
-    <div class="container mt-5">
-        <div class="card">
-            <div class="card-body">
-                <form>
-                    <div class="form-group mb-0">
-                        <div class="row">
-                            <!-- Weather Selection -->
-                            <div class="col-6">
-                                <label for="weather">Select Weather</label>
-                                <select class="form-control" id="weather">
-                                    <option>sunny</option>
-                                    <option>rainy</option>
-                                    <option>snowy</option>
-                                </select>
-                            </div>
-                            <!-- Current Location Input -->
-                            <div class="col-6">
-                                <label for="location">Select Location</label>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="" aria-label="Username"
-                                        aria-describedby="basic-addon1">
+    <div id="bg-img">
+        <div class="container">
+            <div id="spacer"></div>
+            <div class="card opac border-0 rounded-0">
+                <div class="card-body">
+                        <form>
+                            <div class="form-group mb-0">
+                                <div class="row">
+                                    <!-- Weather Selection -->
+                                    <div class="col-6">
+                                        <label for="weather">Select Weather</label>
+                                        <select class="form-control" id="weather">
+                                            <option>sunny</option>
+                                            <option>rainy</option>
+                                            <option>snowy</option>
+                                        </select>
+                                    </div>
+                                    <!-- Current Location Input -->
+                                    <div class="col-6">
+                                        <label for="location">Select Location</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="" aria-label="Username"
+                                                aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Trip Type Selection -->
+                                    <div class="col-6">
+                                        <label for="flight-type">Flight Type</label>
+                                        <select class="form-control" id="flight-type">
+                                            <option>round-trip</option>
+                                            <option>one-way</option>
+                                        </select>
+                                    </div>
+                                    <!-- Flight Class Selection -->
+                                    <div class="col-6">
+                                        <label for="flight-class">Flight Class</label>
+                                        <select class="form-control" id="flight-class">
+                                            <option>economy</option>
+                                            <option>business</option>
+                                            <option>first-class</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                    <div class="row justify-content-center px-3 mt-3">
+                                        <div class="col-10">
+                                            <a href="#" class="btn btn-primary btn-block border-0 rounded-0">search</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="row">
-                            <!-- Trip Type Selection -->
-                            <div class="col-6">
-                                <label for="flight-type">Flight Type</label>
-                                <select class="form-control" id="flight-type">
-                                    <option>round-trip</option>
-                                    <option>one-way</option>
-                                </select>
-                            </div>
-                            <!-- Flight Class Selection -->
-                            <div class="col-6">
-                                <label for="flight-class">Flight Class</label>
-                                <select class="form-control" id="flight-class">
-                                    <option>economy</option>
-                                    <option>business</option>
-                                    <option>first-class</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row justify-content-center px-3 mt-3">
-                            <div class="col-10">
-                                <a href="#" class="btn btn-primary btn-block">search</a>
-                            </div>
-                        </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
