@@ -8,13 +8,14 @@ var user_origin_latitude;
 var user_origin_longitude;
 var user_origin_airport_code;
 var user_weather_choice;
-var user_flight_type;
+//Commenting out flight type, it returned 
+// var user_flight_type;
 var user_flight_class;
 var user_destination_city;
 
 
 $(document).ready(function () {
-
+//Firebase backend config
     var config = {
         apiKey: "AIzaSyCelA6iNkZKZiTepqqsiGA5VMX4WpRggsU",
         authDomain: "canoe-database.firebaseapp.com",
@@ -27,9 +28,10 @@ $(document).ready(function () {
 
     var database = firebase.database();
         
+//Function to get flight information based on parameters provided    
     $("#search").on("click", function() {
         user_weather_choice = $("#weather").val();
-        user_flight_type = $("#flight-type").val();
+        // user_flight_type = $("#flight-type").val();
         user_flight_class = $("#flight-class").val();
         user_entered_origin_zipcode = $("#select-zip").val();
         user_entered_origin_country = $("#select-country").val();
@@ -73,7 +75,7 @@ $(document).ready(function () {
                 });
         } else {
 
-            var queryURL = "https://api.zippopotam.us/" + user_entered_origin_country + "user/" + user_entered_origin_zipcode;
+            var queryURL = "https://api.zippopotam.us/" + user_entered_origin_country + "/" + user_entered_origin_zipcode;
 
             $.ajax({
                 url: queryURL, 
@@ -85,17 +87,17 @@ $(document).ready(function () {
         }
 
 
-
+//Send that flight data to Firebase for safekeeping
         database.ref("user_flight_data").push({
             weather_choice: user_weather_choice,
-            flight_type: user_flight_type,
+            // flight_type: user_flight_type,
             flight_class: user_flight_class
         });
 
-                
+//And load it back into the browser, assigning it local variables
         database.ref("user_flight_data").on("child_added", function(snapshot) {
             user_weather_choice = snapshot.val().weather_choice;
-            user_flight_type = snapshot.val().flight_type;
+            // user_flight_type = snapshot.val().flight_type;
             user_flight_class = snapshot.val().flight_class;
         });
     });
