@@ -29,54 +29,43 @@
             <div id="spacer"></div>
             <div class="card opac border-0 rounded-0">
                 <div class="card-body">
-                        <form>
-                            <div class="form-group mb-0">
-                                <div class="row">
-                                    <!-- Weather Selection -->
-                                    <div class="col-6">
-                                        <label for="weather">Select Weather</label>
-                                        <select class="form-control" id="weather">
-                                            <option>sunny</option>
-                                            <option>rainy</option>
-                                            <option>snowy</option>
-                                        </select>
+                    <form>
+                        <div class="form-group mb-0">
+                            <div class="row">
+                                <!-- Weather Selection -->
+                                <div class="col-6">
+                                    <label for="weather">Select Weather</label>
+                                    <select class="form-control" id="weather">
+                                        <option>sunny</option>
+                                        <option>rainy</option>
+                                        <option>snowy</option>
+                                    </select>
+                                </div>
+                                <!-- Location Input -->
+                                <div class="col-3">
+                                    <label for="country">Enter Country</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="select-country" class="form-control" placeholder="current country" aria-label="Username" aria-describedby="basic-addon1">
                                     </div>
-                                    <!-- Location Input -->
-                                    <div class="col-3">
-                                        <label for="country">Enter Country</label>
-                                        <div class="input-group mb-3">
-                                            <input type="text" id="select-country" class="form-control" placeholder="current country" aria-label="Username" aria-describedby="basic-addon1">
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <label for="zip">Enter Zip</label>
-                                        <div class="input-group mb-3">
-                                            <input type="text" id="select-zip" class="form-control" placeholder="current zip" aria-label="Username" aria-describedby="basic-addon1">
-                                        </div>
+                                </div>
+                                <div class="col-3">
+                                    <label for="zip">Enter Zip</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="select-zip" class="form-control" placeholder="current zip" aria-label="Username" aria-describedby="basic-addon1">
                                     </div>
                                 </div>
                             </div>
 
-                                <div class="row">
-                                    <!-- Departure Date Selection -->
-                                    <div class="col-3">
-                                        <label for="flight-type">Departure Date</label>
-                                        <input type="date" class="form-control" id="dep-date">
-                                    </div>
-                                    <!-- Return Date Selection -->
-                                    <div class="col-3">
-                                        <label for="flight-type">Return Date</label>
-                                        <input type="date" class="form-control" id="return-date">
-                                    </div>
-                                    <!-- Flight Class Selection -->
-                                    <div class="col-6">
-                                        <label for="flight-class">Flight Class</label>
-                                        <select class="form-control" id="flight-class">
-                                            <option>economy</option>
-                                            <option>business</option>
-                                            <option>first-class</option>
-                                        </select>
-                                    </div>
+                            <div class="row">
+                                <!-- Departure Date Selection -->
+                                <div class="col-3">
+                                    <label for="flight-type">Departure Date</label>
+                                    <input type="date" class="form-control" id="dep-date">
+                                </div>
+                                <!-- Return Date Selection -->
+                                <div class="col-3">
+                                    <label for="flight-type">Return Date</label>
+                                    <input type="date" class="form-control" id="return-date">
                                 </div>
                                 <!-- Flight Class Selection -->
                                 <div class="col-6">
@@ -88,15 +77,12 @@
                                     </select>
                                 </div>
                             </div>
-
-                                    <div class="row justify-content-center px-3 mt-3">
-                                        <div class="col-10">
-                                            <a href="#" id="search" class="btn btn-primary btn-block border-0 rounded-0">search</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>  
-                </form>
+                            <div class="row justify-content-center px-3 mt-3">
+                                <a href="#" id="search" class="btn btn-primary btn-block border-0 rounded-0">search</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -131,7 +117,7 @@
 
     <!-- OK. This is our results card, with tabs. We're having difficult with the tabs doing what they're supposed to. -->
 
-    <div class="container mt-5">
+    <div class="container mt-5 border">
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
@@ -142,7 +128,7 @@
         </nav>
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                <div class="row" id="resultRow">
+                <div class="row border" id="resultRow">
 
                     <div class="resultinfo" class="col-2" id="selectbutton">
                             <button type="button" class="btn btn-outline-primary">select</button>
