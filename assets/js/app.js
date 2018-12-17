@@ -31,11 +31,7 @@ $(document).ready(function () {
     };
     firebase.initializeApp(config);
 
-<<<<<<< HEAD
     var database = firebase.database();
-=======
-    // var database = firebase.database();
->>>>>>> master
 
     function renderDeparturesDiv () {
         var newRowDiv = $("<div>");
@@ -158,11 +154,8 @@ $(document).ready(function () {
         user_entered_origin_zipcode = $("#select-zip").val();
         user_entered_origin_country = $("#select-country").val();
         user_flight_class = $("#flight-class").val();
-<<<<<<< HEAD
         user_departure = $("#dep-date").val();
         user_return = $("#return-date").val();
-=======
->>>>>>> master
 
         
      
@@ -206,7 +199,6 @@ $(document).ready(function () {
                                     renderDeparturesDiv();
                                     renderReturnsDiv();
                                 })
-<<<<<<< HEAD
                             }
                         } else if (user_weather_choice === "snowy")  {
                         
@@ -238,39 +230,6 @@ $(document).ready(function () {
                                     renderReturnsDiv();
                                 })
                             }
-=======
-                            }
-                        } else if (user_weather_choice === "snowy")  {
-                        
-                            for (var i = 0; i < snowy_cities.length; i++) {
-                                var queryURL = "https://api.travelpayouts.com/v1/prices/cheap?origin=" + user_origin_airport_code + "&destination=" + snowy_cities[i] + "&token=06e7274ac072c4bc0d482997c118a6ce";
-                                    
-                                $.ajax({
-                                    url: queryURL,
-                                    method: "GET"
-                                })
-                                .then(function(response) {
-                                    console.log(response);
-                                    renderDeparturesDiv();
-                                    renderReturnsDiv();
-                                })
-                            }
-                        } else if (user_weather_choice === "rainy") {
-
-                            for (var i = 0; i < rainy_cities.length; i++) {
-                                var queryURL = "https://api.travelpayouts.com/v1/prices/cheap?origin=" + user_origin_airport_code + "&destination=" + rainy_cities[i] + "&token=06e7274ac072c4bc0d482997c118a6ce";
-                                    
-                                $.ajax({
-                                    url: queryURL,
-                                    method: "GET"
-                                })
-                                .then(function(response) {
-                                    console.log(response);
-                                    renderDeparturesDiv();
-                                    renderReturnsDiv();
-                                })
-                            }
->>>>>>> master
                         }
                     });
                 });             
@@ -302,11 +261,7 @@ $(document).ready(function () {
                         // var sunny_cities = ["SAN-sky", "BCN-sky", "YUM-sky", "ASW-sky", "LAS-sky", + "HLA-sky", "DRW-sky", "MCT-sky"];
 
                         for (var i = 0; i < sunny_cities.length; i++) {
-<<<<<<< HEAD
                             var queryURL =  "https://api.travelpayouts.com/v1/prices/cheap?origin=" + user_origin_airport_code + "&destination=" + sunny_cities[i] + "&depart_date=" + user_departure + "&return_date=" + user_return + "&token=06e7274ac072c4bc0d482997c118a6ce";
-=======
-                            var queryURL =  "https://api.travelpayouts.com/v1/prices/cheap?origin=" + user_origin_airport_code + "&destination=" + sunny_cities[i] + "&depart_date=2018-12&return_date=2019-01&token=06e7274ac072c4bc0d482997c118a6ce";
->>>>>>> master
 
                             $.ajax({
                                 url: queryURL,
@@ -321,11 +276,7 @@ $(document).ready(function () {
                     } else if (user_weather_choice === "snowy")  {
                         
                         for (var i = 0; i < snowy_cities.length; i++) {
-<<<<<<< HEAD
                             var queryURL =  "https://api.travelpayouts.com/v1/prices/cheap?origin=" + user_origin_airport_code + "&destination=" + snowy_cities[i] + "&depart_date=" + user_departure + "&return_date=" + user_return + "&token=06e7274ac072c4bc0d482997c118a6ce";
-=======
-                            var queryURL =  "https://api.travelpayouts.com/v1/prices/cheap?origin=" + user_origin_airport_code + "&destination=" + snowy_cities[i] + "&depart_date=2018-12&return_date=2019-01&token=06e7274ac072c4bc0d482997c118a6ce";
->>>>>>> master
 
                             $.ajax({
                                 url: queryURL,
@@ -339,11 +290,7 @@ $(document).ready(function () {
                         }
                     } else if (user_weather_choice === "rainy") {
                         for (var i = 0; i < rainy_cities.length; i++) {
-<<<<<<< HEAD
                             var queryURL =  "https://api.travelpayouts.com/v1/prices/cheap?origin=" + user_origin_airport_code + "&destination=" + rainy_cities[i] + "&depart_date=" + user_departure + "&return_date=" + user_return + "&token=06e7274ac072c4bc0d482997c118a6ce";
-=======
-                            var queryURL =  "https://api.travelpayouts.com/v1/prices/cheap?origin=" + user_origin_airport_code + "&destination=" + rainy_cities[i] + "&depart_date=2018-12&return_date=2019-01&token=06e7274ac072c4bc0d482997c118a6ce";
->>>>>>> master
 
                             $.ajax({
                                 url: queryURL,
@@ -359,13 +306,8 @@ $(document).ready(function () {
                 });
             });
         } 
-<<<<<<< HEAD
   
 
-=======
-    });
-});
->>>>>>> master
 
 
 //Send that flight data to Firebase for safekeeping
@@ -381,13 +323,9 @@ $(document).ready(function () {
             user_flight_class = snapshot.val().flight_class;
         });                
 
-<<<<<<< HEAD
     });
 
 });
-=======
-
->>>>>>> master
                                     
                                 
                       
