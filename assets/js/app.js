@@ -5,7 +5,7 @@ var user_entered_origin_zipcode;
 var user_flight_class;
 
 //api determined variables
-var user_origin_city;
+var user_origin_city = "ATL";
 var user_origin_latitude;
 var user_origin_longitude;
 var user_origin_airport_code;
@@ -183,7 +183,7 @@ $(document).ready(function () {
                 })
                 .then(function(response) {
                        var response_parsed = JSON.parse(response);
-                       user_origin_airport_code = response_parsed[2].codeIataAirport; 
+                       user_origin_airport_code = "ATL"; 
                        if (user_weather_choice === "sunny") {
                             // var sunny_cities = ["SAN-sky", "BCN-sky", "YUM-sky", "ASW-sky", "LAS-sky", + "HLA-sky", "DRW-sky", "MCT-sky"];
 
@@ -254,7 +254,7 @@ $(document).ready(function () {
                 })
                 .then(function(response) {
                     var airport_response_parsed = JSON.parse(response);
-                    user_origin_airport_code = airport_response_parsed[1].codeIataAirport + "-sky";  
+                    user_origin_airport_code = "ATL"
                     console.log(user_origin_airport_code);
 
                     if (user_weather_choice === "sunny") {
@@ -306,9 +306,6 @@ $(document).ready(function () {
                 });
             });
         } 
-  
-
-
 
 //Send that flight data to Firebase for safekeeping
         database.ref("user_flight_data").push({
@@ -318,7 +315,7 @@ $(document).ready(function () {
 
 //And load it back into the browser, assigning it local variables
         database.ref("user_flight_data").on("child_added", function(snapshot) {
-            console.log(snapshot);
+            console.log("data entered into firebase");
             user_weather_choice = snapshot.val().weather_choice;
             user_flight_class = snapshot.val().flight_class;
         });                
