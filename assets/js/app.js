@@ -35,9 +35,7 @@ $(document).ready(function () {
 
         
 //Function to get flight information based on parameters provided    
-    $("#search").on("click", function(event) {
-
-        event.Prev
+    $("#search").on("click", function() {
 
         
         user_weather_choice = $("#weather").val();
@@ -47,117 +45,163 @@ $(document).ready(function () {
         user_departure = $("#dep-date").val();
         user_return = $("#return-date").val();
 
-        function appendDepartureData () {
-            var newRowDiv = $("<div>");
+        function renderDepartureDivs () {
+            var newTableRow = $("<tr>");
 
-            newRowDiv.addClass("row");
-            newRowDiv.addClass("border");
+            newTableRow.addClass("row");
+            newTableRow.attr("id", "resultRow");
 
-                var newSelectDiv = $("<div>");
-                newSelectDiv.addClass("resultinfo");
-                newSelectDiv.addClass("col-2");
+                var newTableDataButton = $("<td>");
+                newTableDataButton.addClass("resultinfo col-2");
+                newTableDataButton.attr("id", "selectButton");
 
-                    var newSelectButton = $("<button>");
-                    newSelectButton.attr("type", "button");
-                    newSelectButton.addClass("btn");
-                    newSelectButton.addClass("btn-outline-primary");
-                    newSelectButton.text("select");
+                    var selectButton = $("<button>");
+                    selectButton.attr("type", "button");
+                    selectButton.addClass("btn btn-outline-primary");
+                    selectButton.text("Select");
+                    
+                    newTableDataButton.append(selectButton);
 
-                newSelectDiv.append(newSelectButton);
+                newTableRow.append(newTableDataButton);
 
-            var newFlightDiv = $("<div>");
-            newFlightDiv.addClass("col-2");
-            newFlightDiv.addClass("resultinfo");
-            newFlightDiv.append("<p>" + "airline" + "</p>");
-            newFlightDiv.append("<p>" + localStorage.getItem("departure_time") + "</p>");
-            newFlightDiv.append("<p>" + localStorage.getItem("departure_time") + "</p>");
+                var newTableFlightData = $("<td>");
+                newTableFlightData.addClass("resultinfo col-2");
+                newTableFlightData.attr("id", "flightDiv");
 
-            var newPriceDiv = $("<div>");
-            newPriceDiv.addClass("resultinfo");
-            newPriceDiv.addClass("col-2");
-            newPriceDiv.text(localStorage.getItem("price"));
+                    var flightNoPara = $("<p>");
+                    flightNoPara.attr("id", "flightNo");
+                    newTableFlightData.append(flightNoPara);
 
-            var newCabinDiv = $("<div>");
-            newCabinDiv.addClass("resultinfo");
-            newCabinDiv.addClass("col-2");
-            newCabinDiv.text("Economy");
-            
-            var newDestinationDiv = $("<div>");
-            newDestinationDiv.addClass("resultinfo");
-            newDestinationDiv.addClass("col-2");
-            newDestinationDiv.text(localStorage.getItem("destination"));
+                    var flightDatePara = $("<p>");
+                    flightDatePara.attr("id", "flightDate");
+                    newTableFlightData.append(flightDatePara);
 
-            var newWeatherIconDiv = $("<div>");
-            newWeatherIconDiv.addClass("resultinfo");
-            newWeatherIconDiv.addClass("col-4");
-            newWeatherIconDiv.text(localStorage.getItem("weather_choice"));
+                    var flightTimePara = $("<p>");
+                    flightTimePara.attr("id", "flightTime");
+                    newTableFlightData.append(flightTimePara);
 
-            newRowDiv.append(newSelectDiv);
-            newRowDiv.append(newFlightDiv);
-            newRowDiv.append(newPriceDiv);
-            newRowDiv.append(newCabinDiv);
-            newRowDiv.append(newDestinationDiv);
-            newRowDiv.append(newWeatherIconDiv);
+                    var cabinTypePara = $("<p>");
+                    cabinTypePara.attr("id", "cabinType");
+                    newTableFlightData.append(cabinTypePara);
 
-            $("#nav-home").append(newRowDiv);
+                newTableRow.append(newTableFlightData);
+
+
+                var newTablePriceData = $("<td>");
+                newTablePriceData.addClass("resultinfo col-2");
+                newTablePriceData.attr("id", "priceDiv");
+                newTablePriceData.text("");
+                newTableRow.append(newTablePriceData);
+
+                var newTableDestData = $("<td>");
+                newTableDestData.addClass("resultinfo col-2");
+                newTableDestData.attr("id", "destinationDiv");
+                newTableRow.append(newTableDestData);
+
+                var newTableWeatherIconData = $("<td>");
+                newTableWeatherIconData.addClass("resultinfo col-4");
+                
+                    var newWeatherIcon = $("<img>");
+                    newWeatherIcon.addClass("forecast");
+                    newWeatherIcon.attr("id", "forecast1");
+                    newWeatherIcon.attr("src", "");
+                    newTableWeatherIconData.append(newWeatherIcon);
+
+                    var newWeatherIcon = $("<img>");
+                    newWeatherIcon.addClass("forecast");
+                    newWeatherIcon.attr("id", "forecast2");
+                    newWeatherIcon.attr("src", "");
+                    newTableWeatherIconData.append(newWeatherIcon);
+
+                    var newWeatherIcon = $("<img>");
+                    newWeatherIcon.addClass("forecast");
+                    newWeatherIcon.attr("id", "forecast3");
+                    newWeatherIcon.attr("src", "");
+                    newTableWeatherIconData.append(newWeatherIcon);
+                
+                newTableRow.append(newTableWeatherIconData);
+            $("#departure_flight_content").append(newTableRow);
 
         }
 
-        function appendReturnData () {
-            var newRowDiv = $("<div>");
+        function renderReturnDivs () {
+            var newTableRow = $("<tr>");
 
-            newRowDiv.addClass("row");
-            newRowDiv.addClass("border");
+            newTableRow.addClass("row");
+            newTableRow.attr("id", "resultRow");
 
-                var newSelectDiv = $("<div>");
-                newSelectDiv.addClass("resultinfo");
-                newSelectDiv.addClass("col-2");
+                var newTableDataButton = $("<td>");
+                newTableDataButton.addClass("resultinfo col-2");
+                newTableDataButton.attr("id", "selectButton");
 
-                    var newSelectButton = $("<button>");
-                    newSelectButton.attr("type", "button");
-                    newSelectButton.addClass("btn");
-                    newSelectButton.addClass("btn-outline-primary");
-                    newSelectButton.text("select");
+                    var selectButton = $("<button>");
+                    selectButton.attr("type", "button");
+                    selectButton.addClass("btn btn-outline-primary");
+                    selectButton.text("Select");
+                    
+                    newTableDataButton.append(selectButton);
 
-                newSelectDiv.append(newSelectButton);
+                newTableRow.append(newTableDataButton);
 
-            var newFlightDiv = $("<div>");
-            newFlightDiv.addClass("col-2");
-            newFlightDiv.addClass("resultinfo");
-            newFlightDiv.append("<p>" + "airline" + "</p>");
-            newFlightDiv.append("<p>" + localStorage.getItem("return_time") + "</p>");
-            newFlightDiv.append("<p>" + localStorage.getItem("return_time") + "</p>");
+                var newTableFlightData = $("<td>");
+                newTableFlightData.addClass("resultinfo col-2");
+                newTableFlightData.attr("id", "flightDiv");
 
-            var newPriceDiv = $("<div>");
-            newPriceDiv.addClass("resultinfo");
-            newPriceDiv.addClass("col-2");
-            newPriceDiv.text(flight_price);
+                    var flightNoPara = $("<p>");
+                    flightNoPara.attr("id", "flightNo");
+                    newTableFlightData.append(flightNoPara);
 
-            var newCabinDiv = $("<div>");
-            newCabinDiv.addClass("resultinfo");
-            newCabinDiv.addClass("col-2");
-            newCabinDiv.text("Economy");
-            
-            var newDestinationDiv = $("<div>");
-            newDestinationDiv.addClass("resultinfo");
-            newDestinationDiv.addClass("col-2");
-            newDestinationDiv.text(localStorage.getItem("origin_city"));
+                    var flightDatePara = $("<p>");
+                    flightDatePara.attr("id", "flightDate");
+                    newTableFlightData.append(flightDatePara);
 
-            var newWeatherIconDiv = $("<div>");
-            newWeatherIconDiv.addClass("resultinfo");
-            newWeatherIconDiv.addClass("col-4");
-            newWeatherIconDiv.text("opposite of user weather choice");
+                    var flightTimePara = $("<p>");
+                    flightTimePara.attr("id", "flightTime");
+                    newTableFlightData.append(flightTimePara);
 
-            newRowDiv.append(newSelectDiv);
-            newRowDiv.append(newFlightDiv);
-            newRowDiv.append(newPriceDiv);
-            newRowDiv.append(newCabinDiv);
-            newRowDiv.append(newDestinationDiv);
-            newRowDiv.append(newWeatherIconDiv);
+                    var cabinTypePara = $("<p>");
+                    cabinTypePara.attr("id", "cabinType");
+                    newTableFlightData.append(cabinTypePara);
 
-            $("#nav-profile").append(newRowDiv);
+                newTableRow.append(newTableFlightData);
+
+
+                var newTablePriceData = $("<td>");
+                newTablePriceData.addClass("resultinfo col-2");
+                newTablePriceData.attr("id", "priceDiv");
+                newTablePriceData.text("");
+                newTableRow.append(newTablePriceData);
+
+                var newTableDestData = $("<td>");
+                newTableDestData.addClass("resultinfo col-2");
+                newTableDestData.attr("id", "destinationDiv");
+                newTableRow.append(newTableDestData);
+
+                var newTableWeatherIconData = $("<td>");
+                newTableWeatherIconData.addClass("resultinfo col-4");
+                
+                    var newWeatherIcon = $("<img>");
+                    newWeatherIcon.addClass("forecast");
+                    newWeatherIcon.attr("id", "forecast1");
+                    newWeatherIcon.attr("src", "");
+                    newTableWeatherIconData.append(newWeatherIcon);
+
+                    var newWeatherIcon = $("<img>");
+                    newWeatherIcon.addClass("forecast");
+                    newWeatherIcon.attr("id", "forecast2");
+                    newWeatherIcon.attr("src", "");
+                    newTableWeatherIconData.append(newWeatherIcon);
+
+                    var newWeatherIcon = $("<img>");
+                    newWeatherIcon.addClass("forecast");
+                    newWeatherIcon.attr("id", "forecast3");
+                    newWeatherIcon.attr("src", "");
+                    newTableWeatherIconData.append(newWeatherIcon);
+                
+                newTableRow.append(newTableWeatherIconData);
+            $("#return_flight_content").append(newTableRow);
+
         }
-            
 
         if (user_entered_origin_zipcode === "" && user_entered_origin_country === "") {
 
@@ -207,6 +251,11 @@ $(document).ready(function () {
 
                                     flight_price = parseInt(resulting_data[0][1].price / 66); //gives us flight price in doll hairs
 
+                                    renderDepartureDivs();
+                                    renderReturnDivs();
+
+
+
                                 })
                             }
 
@@ -226,6 +275,7 @@ $(document).ready(function () {
                                     resulting_data = Object.values(response.data); // makes us able to access the specifc price
                                                             
                                     flight_departure_time = resulting_data[0][1].departure_at; //need to convert this with moment.js
+                                    
                                     flight_return_time = resulting_data[0][1].return_at; //need to convert this with moment.js
 
                                     flight_price = parseInt(resulting_data[0][1].price / 66); //gives us flight price in doll hairs
@@ -246,6 +296,7 @@ $(document).ready(function () {
                                     resulting_data = Object.values(response.data); // makes us able to access the specifc price
                                                             
                                     flight_departure_time = resulting_data[0][1].departure_at; //need to convert this with moment.js
+                                    
                                     flight_return_time = resulting_data[0][1].return_at; //need to convert this with moment.js
 
                                     flight_price = parseInt(resulting_data[0][1].price / 66); //gives us flight price in doll hairs
@@ -346,14 +397,6 @@ $(document).ready(function () {
             });
         } 
     });   
-    
-    if (!localStorage) {
-        console.log("Nothing stored in local storage");
-    } else {
-        addDepartureData();
-        addReturnData();
-    } 
-
 });
 
 
