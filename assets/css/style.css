@@ -7,7 +7,7 @@ body {
     margin-bottom: 75px;
 }
 
-nav {
+.main-nav {
     height: 100px;
 }
 
@@ -49,23 +49,17 @@ form label {
 
 .forecast {
     width: 100px;
-    padding-left: 20px;
-}
-
-#resultRow {
-    padding-top: 20px;
-}
-
-.resultinfo {
-    padding-top: 60px;
-    padding-left: 30px;
-    
+    /* padding-left: 20px; */
 }
 
 #searchparameters {
     text-align: center;
     padding-top: 20px;
     
+}
+
+#priceDiv {
+    font-size: 30px;
 }
 
 #flightsbanner {
@@ -78,4 +72,24 @@ form label {
 
 #returnFlightNo {
     font-weight: bold;
+}
+
+.table > tbody > tr > td {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border-top: 2px solid rgb(0,137,207);
+}
+
+td:not(:first-child) {
+    border-left: 2px solid rgb(0,137,207);
+}
+
+.border-primary {
+    border: 2px solid rgb(0,137,207);
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .show>.nav-link {
+    color: #fff;
+    background-color: rgb(0,137,207);
 }
