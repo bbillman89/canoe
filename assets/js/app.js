@@ -50,29 +50,6 @@ $(document).ready(function () {
         $("#tripType").text("Round Trip");
         $("#seatType").text("Economy");
 
-        function grabFlightData(response, weatherIconLink) {
-            flight_destination = Object.keys(response.data)[0];
-
-            resulting_data = Object.values(response.data); // makes us able to access the specific price
-
-            flight_departure_date = moment(resulting_data[0][1].departure_at).format("LL");
-            
-            flight_return_date = moment(resulting_data[0][1].return_at).format("LL");
-                                    
-            flight_departure_time = moment(resulting_data[0][1].departure_at).format("LT");
-            
-            flight_return_time = moment(resulting_data[0][1].return_at).format("LT"); 
-
-            flight_price = parseInt(resulting_data[0][1].price / 66); //gives us flight price in $$$
-
-            flight_no = resulting_data[0][1].flight_number;
-
-            flight_airline = resulting_data[0][1].airline;
-
-            renderDepartureDivs(weatherIconLink);
-            renderReturnDivs(weatherIconLink);
-        }
-
         //function to create new flight information divs for departure data
         function renderDepartureDivs (weatherIconLink) {
             var newTableRow = $("<tr>");
@@ -286,7 +263,7 @@ $(document).ready(function () {
                                 //Using the airport code that we received from the previous API, we would plug that into our flights API as the origin city. However, because we are using a free
                                 //version, our flights api will only return cached data from user queries in the past 48 hours. This means that if a user has not searched a flight from say "Burke Lakefront" to "LAX", 
                                 //we simply will not return any flight data. For this reason, we have decided to hard code in "CLE" as our origin city to ensure we are able to display results.
-                                var queryURL = "https://api.travelpayouts.com/v1/prices/cheap?origin=CLE&destination=" + sunny_cities[i] + "&token=06e7274ac072c4bc0d482997c118a6ce";
+                                var queryURL = "https://api.travelpayouts.com/v1/prices/cheap?origin=CLE&destination=" + sunny_cities[i] + "&depart_date=" + user_departure + "&return_date=" + user_return + "&token=06e7274ac072c4bc0d482997c118a6ce";
                                     
                                 $.ajax({
                                     url: queryURL,
@@ -326,7 +303,7 @@ $(document).ready(function () {
                             $("#return_flight_content").empty();
                         
                             for (var i = 0; i < snowy_cities.length; i++) {
-                                var queryURL = "https://api.travelpayouts.com/v1/prices/cheap?origin=CLE&destination=" + snowy_cities[i] + "&token=06e7274ac072c4bc0d482997c118a6ce";
+                                var queryURL = "https://api.travelpayouts.com/v1/prices/cheap?origin=CLE&destination=" + sunny_cities[i] + "&depart_date=" + user_departure + "&return_date=" + user_return + "&token=06e7274ac072c4bc0d482997c118a6ce";
                                     
                                 $.ajax({
                                     url: queryURL,
@@ -363,7 +340,7 @@ $(document).ready(function () {
                             $("#return_flight_content").empty();
 
                             for (var i = 0; i < rainy_cities.length; i++) {
-                                var queryURL = "https://api.travelpayouts.com/v1/prices/cheap?origin=CLE&destination=" + rainy_cities[i] + "&token=06e7274ac072c4bc0d482997c118a6ce";
+                                var queryURL = "https://api.travelpayouts.com/v1/prices/cheap?origin=CLE&destination=" + sunny_cities[i] + "&depart_date=" + user_departure + "&return_date=" + user_return + "&token=06e7274ac072c4bc0d482997c118a6ce";
                                     
                                 $.ajax({
                                     url: queryURL,
