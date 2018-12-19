@@ -345,6 +345,29 @@ $(document).ready(function () {
                 });
             });
         } 
+        if (user_weather_choice == "sunny") {
+            console.log("weather is sunny")
+            $("#forecast1").attr("src", "./assets/images/sunimage.png")
+            $("#forecast2").attr("src", "./assets/images/sunimage.png")
+            $("#forecast3").attr("src", "./assets/images/sunimage.png")
+        }
+        
+        else if (user_weather_choice == "snowy") {
+            console.log("weather is snowy")
+            $("#forecast1").attr("src", "./assets/images/snowflake.png")
+            $("#forecast2").attr("src", "./assets/images/snowflake.png")
+            $("#forecast3").attr("src", "./assets/images/snowflake.png")
+        }
+        
+        else if (user_weather_choice == "rainy") {
+            console.log("weather is rainy")
+            $("#forecast1").attr("src", "./assets/images/rain.png")
+            $("#forecast2").attr("src", "./assets/images/rain.png")
+            $("#forecast3").attr("src", "./assets/images/rain.png")
+        
+        };
+
+
     });   
     
     if (!localStorage) {
