@@ -11,6 +11,10 @@ body {
     height: 100px;
 }
 
+a, .btn {
+    color: rgb(0,137,207);
+}
+
 #sign-in {
     list-style: none;
     text-align: right;
@@ -85,8 +89,8 @@ td:not(:first-child) {
     border-left: 2px solid rgb(0,137,207);
 }
 
-.border-primary {
-    border: 2px solid rgb(0,137,207);
+.border-primary, .btn-outline-primary {
+    border: 2px solid rgb(0,137,207) !important;
 }
 
 .nav-tabs .nav-link.active, .nav-tabs .show>.nav-link {
