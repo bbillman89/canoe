@@ -13,16 +13,18 @@
 </head>
 
 <body>
-    <nav class="row main-nav">
-        <div class="col-2 my-auto ml-5">
-            <img class="" src="assets/images/Canoe-logo.svg">
-        </div>
-        <div class="col-9 my-auto">
-            <ul class="m-0">
-                <li id="sign-in"><a href="#">sign in</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="container">
+        <nav class="row main-nav">
+            <div class="col-3 my-auto">
+                <img class="" src="assets/images/Canoe-logo.svg">
+            </div>
+            <div class="col-9 my-auto">
+                <ul class="m-0">
+                    <li id="sign-in"><a href="#">sign in</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <!-- First, the search function div -->
     <div id="bg-img">
         <div class="container">
@@ -134,36 +136,265 @@
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                         <div class="container">
-                            <table class="table mb-0 table-striped table-hover">
+                            <table class="table mb-0 table-striped">
                                 <tbody id="departure_flight_content">
                                     <tr class="row" id="resultRow">
 
-                                        <td class="resultinfo col-2" id="selectbutton">
-                                            <button type="button" class="btn btn-outline-primary">select</button>
+                                        <td class="resultinfo col-2 my-auto" id="selectbutton">
+                                            <button type="button" class="btn btn-outline-primary rounded-0">select</button>
                                         </td>
 
-                                        <td class="resultinfo col-2" id="flightDiv"> 
+                                        <td class="resultinfo col-4 my-auto" id="flightDiv"> 
                                             <p id="flightNo">AA Flight 932</p> 
                                             <p id="flightDate">12/12/2018</p>
                                             <p id="flightTime">8:47AM</p>
                                             <p id="cabinType">economy</p>
+                                            <p id="flightDest">Cabo San Lucas, Bitch</p>
                                         </td>
 
-                                        <td class="resultinfo col-2" id="priceDiv">
-                                            $695
-                                        </td>
-
-                                        <td class="resultinfo col-2" id="destinationDiv">
-                                            Cabo San Lucas, Bitch
+                                        <td class="resultinfo col-3 my-auto" id="priceDiv">
+                                            $0000.00
                                         </td>
                                         
-                                        <td class="resultinfo col-4">
-                                            <img class="forecast" id="forecast1" src="assets/images/sunimage.png">
-                                            <img class="forecast" id="forecast2" src="assets/images/sunimage.png">
-                                            <img class="forecast" id="forecast3" src="assets/images/sunimage.png">
+                                        <td class="resultinfo col-1 my-auto">
+                                            <p id="weather-date">
+                                                tues
+                                            </p>
+                                            <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                            <p id="weather">
+                                                67/64
+                                            </p>
+                                        </td>
+
+                                        <td class="resultinfo col-1 my-auto">
+                                            <p id="weather-date">
+                                                tues
+                                            </p>
+                                            <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                            <p id="weather">
+                                                67/64
+                                            </p>
+                                        </td>
+
+                                        <td class="resultinfo col-1 my-auto">
+                                            <p id="weather-date">
+                                                tues
+                                            </p>
+                                            <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                            <p id="weather">
+                                                67/64
+                                            </p>
                                         </td>
 
                                     </tr>
+
+
+                                    <tr class="row" id="resultRow">
+
+                                            <td class="resultinfo col-2 my-auto" id="selectbutton">
+                                                <button type="button" class="btn btn-outline-primary rounded-0">select</button>
+                                            </td>
+    
+                                            <td class="resultinfo col-4 my-auto" id="flightDiv"> 
+                                                <p id="flightNo">AA Flight 932</p> 
+                                                <p id="flightDate">12/12/2018</p>
+                                                <p id="flightTime">8:47AM</p>
+                                                <p id="cabinType">economy</p>
+                                                <p id="flightDest">Cabo San Lucas, Bitch</p>
+                                            </td>
+    
+                                            <td class="resultinfo col-3 my-auto" id="priceDiv">
+                                                $0000.00
+                                            </td>
+                                            
+                                            <td class="resultinfo col-1 my-auto">
+                                                <p id="weather-date">
+                                                    tues
+                                                </p>
+                                                <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                                <p id="weather">
+                                                    67/64
+                                                </p>
+                                            </td>
+    
+                                            <td class="resultinfo col-1 my-auto">
+                                                <p id="weather-date">
+                                                    tues
+                                                </p>
+                                                <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                                <p id="weather">
+                                                    67/64
+                                                </p>
+                                            </td>
+    
+                                            <td class="resultinfo col-1 my-auto">
+                                                <p id="weather-date">
+                                                    tues
+                                                </p>
+                                                <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                                <p id="weather">
+                                                    67/64
+                                                </p>
+                                            </td>
+    
+                                        </tr>
+
+
+                                        <tr class="row" id="resultRow">
+
+                                                <td class="resultinfo col-2 my-auto" id="selectbutton">
+                                                    <button type="button" class="btn btn-outline-primary rounded-0">select</button>
+                                                </td>
+        
+                                                <td class="resultinfo col-4 my-auto" id="flightDiv"> 
+                                                    <p id="flightNo">AA Flight 932</p> 
+                                                    <p id="flightDate">12/12/2018</p>
+                                                    <p id="flightTime">8:47AM</p>
+                                                    <p id="cabinType">economy</p>
+                                                    <p id="flightDest">Cabo San Lucas, Bitch</p>
+                                                </td>
+        
+                                                <td class="resultinfo col-3 my-auto" id="priceDiv">
+                                                    $0000.00
+                                                </td>
+                                                
+                                                <td class="resultinfo col-1 my-auto">
+                                                    <p id="weather-date">
+                                                        tues
+                                                    </p>
+                                                    <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                                    <p id="weather">
+                                                        67/64
+                                                    </p>
+                                                </td>
+        
+                                                <td class="resultinfo col-1 my-auto">
+                                                    <p id="weather-date">
+                                                        tues
+                                                    </p>
+                                                    <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                                    <p id="weather">
+                                                        67/64
+                                                    </p>
+                                                </td>
+        
+                                                <td class="resultinfo col-1 my-auto">
+                                                    <p id="weather-date">
+                                                        tues
+                                                    </p>
+                                                    <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                                    <p id="weather">
+                                                        67/64
+                                                    </p>
+                                                </td>
+        
+                                            </tr>
+
+
+
+                                            <tr class="row" id="resultRow">
+
+                                                    <td class="resultinfo col-2 my-auto" id="selectbutton">
+                                                        <button type="button" class="btn btn-outline-primary rounded-0">select</button>
+                                                    </td>
+            
+                                                    <td class="resultinfo col-4 my-auto" id="flightDiv"> 
+                                                        <p id="flightNo">AA Flight 932</p> 
+                                                        <p id="flightDate">12/12/2018</p>
+                                                        <p id="flightTime">8:47AM</p>
+                                                        <p id="cabinType">economy</p>
+                                                        <p id="flightDest">Cabo San Lucas, Bitch</p>
+                                                    </td>
+            
+                                                    <td class="resultinfo col-3 my-auto" id="priceDiv">
+                                                        $0000.00
+                                                    </td>
+                                                    
+                                                    <td class="resultinfo col-1 my-auto">
+                                                        <p id="weather-date">
+                                                            tues
+                                                        </p>
+                                                        <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                                        <p id="weather">
+                                                            67/64
+                                                        </p>
+                                                    </td>
+            
+                                                    <td class="resultinfo col-1 my-auto">
+                                                        <p id="weather-date">
+                                                            tues
+                                                        </p>
+                                                        <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                                        <p id="weather">
+                                                            67/64
+                                                        </p>
+                                                    </td>
+            
+                                                    <td class="resultinfo col-1 my-auto">
+                                                        <p id="weather-date">
+                                                            tues
+                                                        </p>
+                                                        <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                                        <p id="weather">
+                                                            67/64
+                                                        </p>
+                                                    </td>
+            
+                                                </tr>
+
+
+
+                                                <tr class="row" id="resultRow">
+
+                                                        <td class="resultinfo col-2 my-auto" id="selectbutton">
+                                                            <button type="button" class="btn btn-outline-primary rounded-0">select</button>
+                                                        </td>
+                
+                                                        <td class="resultinfo col-4 my-auto" id="flightDiv"> 
+                                                            <p id="flightNo">AA Flight 932</p> 
+                                                            <p id="flightDate">12/12/2018</p>
+                                                            <p id="flightTime">8:47AM</p>
+                                                            <p id="cabinType">economy</p>
+                                                            <p id="flightDest">Cabo San Lucas, Bitch</p>
+                                                        </td>
+                
+                                                        <td class="resultinfo col-3 my-auto" id="priceDiv">
+                                                            $0000.00
+                                                        </td>
+                                                        
+                                                        <td class="resultinfo col-1 my-auto">
+                                                            <p id="weather-date">
+                                                                tues
+                                                            </p>
+                                                            <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                                            <p id="weather">
+                                                                67/64
+                                                            </p>
+                                                        </td>
+                
+                                                        <td class="resultinfo col-1 my-auto">
+                                                            <p id="weather-date">
+                                                                tues
+                                                            </p>
+                                                            <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                                            <p id="weather">
+                                                                67/64
+                                                            </p>
+                                                        </td>
+                
+                                                        <td class="resultinfo col-1 my-auto">
+                                                            <p id="weather-date">
+                                                                tues
+                                                            </p>
+                                                            <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                                            <p id="weather">
+                                                                67/64
+                                                            </p>
+                                                        </td>
+                
+                                                    </tr>                                                
+
+
                                 <tbody>
                             </table>
                         </div>
@@ -194,9 +425,9 @@
                                         </td>
                                         
                                         <td class="resultinfo col-4">
-                                            <img class="forecast" id="forecast1" src="assets/images/sunimage.png">
-                                            <img class="forecast" id="forecast2" src="assets/images/sunimage.png">
-                                            <img class="forecast" id="forecast3" src="assets/images/sunimage.png">
+                                            <img class="forecast" id="forecast1" src="assets/images/sun-solid.svg">
+                                            <img class="forecast" id="forecast2" src="assets/images/sun-solid.svg">
+                                            <img class="forecast" id="forecast3" src="assets/images/sun-solid.svg">
                                         </td>
 
                                     </tr>
