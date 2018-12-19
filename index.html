@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <nav class="row">
+    <nav class="row main-nav">
         <div class="col-2 my-auto ml-5">
             <img class="" src="assets/images/Canoe-logo.svg">
         </div>
@@ -100,14 +100,17 @@
                 <h3 id="userWeather"> sunny
                 </h3>
             </div>
+            <h3>/</h3>
             <div class="col-2">
                 <h3 id="userLocation"> current location
                 </h3>
             </div>
+            <h3>/</h3>
             <div class="col-2">
                 <h3 id="tripType"> round-trip
                 </h3>
             </div>
+            <h3>/</h3>
             <div class="col-2">
                 <h3 id="seatType"> economy
                 </h3>
@@ -117,66 +120,82 @@
 
     <!-- OK. This is our results card, with tabs. We're having difficult with the tabs doing what they're supposed to. -->
 
-    <div class="container mt-5 border">
-        <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
-                    aria-controls="nav-home" aria-selected="true">D E P A R T U R E S</a>
-                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
-                    aria-controls="nav-profile" aria-selected="false">R E T U R N S</a>
-            </div>
-        </nav>
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                <div class="row border" id="resultRow">
+    <div class="container mt-5">
+        <div class="card border-primary rounded-0">
+            <nav>
+                <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active border-0 rounded-0" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                        aria-controls="nav-home" aria-selected="true">D E P A R T U R E S</a>
+                    <a class="nav-item nav-link border-0 rounded-0" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                        aria-controls="nav-profile" aria-selected="false">R E T U R N S</a>
+                </div>
+            </nav>
+            <div class="card-body p-0">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="container">
+                            <table class="table mb-0 table-striped table-hover">
+                                <tbody>
+                                    <tr class="row" id="resultRow">
 
-                    <div class="resultinfo" class="col-2" id="selectbutton">
-                            <button type="button" class="btn btn-outline-primary">select</button>
-                    </div>
-                    <div class="resultinfo" class="col-2" id="flightDiv"> 
-                            <p id="flightNo">AA Flight 932</p> 
-                            <p id="flightDate">12/12/2018</p>
-                            <p id="flightTime">8:47AM</p>
+                                        <td class="resultinfo col-2" id="selectbutton">
+                                            <button type="button" class="btn btn-outline-primary">select</button>
+                                        </td>
+
+                                        <td class="resultinfo col-2" id="flightDiv"> 
+                                            <p id="flightNo">AA Flight 932</p> 
+                                            <p id="flightDate">12/12/2018</p>
+                                            <p id="flightTime">8:47AM</p>
+                                            <p id="cabinType">economy</p>
+                                        </td>
+
+                                        <td class="resultinfo col-2" id="priceDiv">
+                                            $695
+                                        </td>
+
+                                        <td class="resultinfo col-2" id="destinationDiv">
+                                            Cabo San Lucas, Bitch
+                                        </td>
+                                        
+                                        <td class="resultinfo col-4">
+                                            <img class="forecast" id="forecast1" src="assets/images/sunimage.png">
+                                            <img class="forecast" id="forecast2" src="assets/images/sunimage.png">
+                                            <img class="forecast" id="forecast3" src="assets/images/sunimage.png">
+                                        </td>
+
+                                    </tr>
+                                <tbody>
+                            </table>
                         </div>
-                    <div class="resultinfo" class="col-2" id="priceDiv"> $695
                     </div>
-                    <div class="resultinfo" class="col-2" id="cabinDiv"> Business Class
-                    </div>
-                    <div class="resultinfo" class="col-2" id="destinationDiv"> Cabo San Lucas, Bitch
-                    </div>
-                    
-                    <div class="resultinfo" class="col-4">
-                        <img class="forecast" id="forecast1" src="assets/images/sunimage.png">
-                        <img class="forecast" id="forecast2" src="assets/images/sunimage.png">
-                        <img class="forecast" id="forecast3" src="assets/images/sunimage.png">
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="row" id="resultRow">
+
+                        <div class="resultinfo" class="col-2" id="selectbutton">
+                                <button type="button" class="btn btn-outline-primary">select</button>
+                        </div>
+                        <div class="resultinfo" class="col-2" id="returnFlight"> 
+                            <p id="returnFlightNo">AA Flight 932</p> 
+                            <p id="returnDate">12/15/2018</p>
+                            <p id="returnTime">9:35AM</p>
+                            </div>
+                        <div class="resultinfo" class="col-2" id="returnPrice"> $852
+                        </div>
+                        <div class="resultinfo" class="col-2" id="returnCabin"> Business Class
+                        </div>
+                        <div class="resultinfo" class="col-2" id="returnDestination"> Detroit, Loser
+                        </div>
+                        
+                        <div class="resultinfo" class="col-4">
+                            <img class="forecast" id="forecast1" src="assets/images/snowflake-solid.svg">
+                            <img class="forecast" id="forecast2" src="assets/images/snowflake-solid.svg">
+                            <img class="forecast" id="forecast3" src="assets/images/snowflake-solid.svg">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                <div class="row" id="resultRow">
-
-                <div class="resultinfo" class="col-2" id="selectbutton">
-                        <button type="button" class="btn btn-outline-primary">select</button>
-                </div>
-                <div class="resultinfo" class="col-2" id="returnFlight"> 
-                    <p id="returnFlightNo">AA Flight 932</p> 
-                    <p id="returnDate">12/15/2018</p>
-                    <p id="returnTime">9:35AM</p>
-                    </div>
-                <div class="resultinfo" class="col-2" id="returnPrice"> $852
-                </div>
-                <div class="resultinfo" class="col-2" id="returnCabin"> Business Class
-                </div>
-                <div class="resultinfo" class="col-2" id="returnDestination"> Detroit, Loser
-                </div>
-                
-                <div class="resultinfo" class="col-4">
-                    <img class="forecast" id="forecast1" src="assets/images/snowflake-solid.svg">
-                    <img class="forecast" id="forecast2" src="assets/images/snowflake-solid.svg">
-                    <img class="forecast" id="forecast3" src="assets/images/snowflake-solid.svg">
-                </div>
-            </div></div>
         </div>
+    </div>
 
 
 
