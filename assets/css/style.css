@@ -123,6 +123,6 @@ form label {
     background-color: rgba(0,137,207, 0.1);
 }
 
-/* .table-striped tr:hover {
+.table-striped tr:hover {
     background-color: rgba(183, 0, 207, 0.9);
-} */
+}
