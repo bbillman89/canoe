@@ -224,7 +224,7 @@ $(document).ready(function () {
         //conditional to run logic dependent on weather user entered a specific zipcode/country --> otherwise, we just use their current location from the IPStack API
         if (user_entered_origin_zipcode === "" && user_entered_origin_country === "") {
 
-            var queryURL = "http://api.ipstack.com/check?access_key=415674c515bf829f14381045fd241e54";
+            var queryURL = "https://api.ipstack.com/check?access_key=415674c515bf829f14381045fd241e54";
 
             $.ajax({
                 url: queryURL,
