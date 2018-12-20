@@ -239,7 +239,7 @@ $(document).ready(function () {
                 user_origin_city = response.city;
             
 
-                var queryURL = "http://aviation-edge.com/v2/public/nearby?key=70faba-ef2534&lat=" + user_origin_latitude + "&lng=" + user_origin_longitude + "&distance=25";
+                var queryURL = "https://aviation-edge.com/v2/public/nearby?key=70faba-ef2534&lat=" + user_origin_latitude + "&lng=" + user_origin_longitude + "&distance=25";
                  
                 $.ajax({
                     url: queryURL,
@@ -303,7 +303,7 @@ $(document).ready(function () {
                             $("#return_flight_content").empty();
                         
                             for (var i = 0; i < snowy_cities.length; i++) {
-                                var queryURL = "https://api.travelpayouts.com/v1/prices/cheap?origin=CLE&destination=" + sunny_cities[i] + "&depart_date=" + user_departure + "&return_date=" + user_return + "&token=06e7274ac072c4bc0d482997c118a6ce";
+                                var queryURL = "https://api.travelpayouts.com/v1/prices/cheap?origin=CLE&destination=" + snowy_cities[i] + "&depart_date=" + user_departure + "&return_date=" + user_return + "&token=06e7274ac072c4bc0d482997c118a6ce";
                                     
                                 $.ajax({
                                     url: queryURL,
@@ -340,7 +340,7 @@ $(document).ready(function () {
                             $("#return_flight_content").empty();
 
                             for (var i = 0; i < rainy_cities.length; i++) {
-                                var queryURL = "https://api.travelpayouts.com/v1/prices/cheap?origin=CLE&destination=" + sunny_cities[i] + "&depart_date=" + user_departure + "&return_date=" + user_return + "&token=06e7274ac072c4bc0d482997c118a6ce";
+                                var queryURL = "https://api.travelpayouts.com/v1/prices/cheap?origin=CLE&destination=" + rainy_cities[i] + "&depart_date=" + user_departure + "&return_date=" + user_return + "&token=06e7274ac072c4bc0d482997c118a6ce";
                                     
                                 $.ajax({
                                     url: queryURL,
@@ -391,7 +391,7 @@ $(document).ready(function () {
                 user_origin_latitude = response.places[0].latitude;
                 user_origin_longitude = response.places[0].longitude;
 
-                var queryURL = "http://aviation-edge.com/v2/public/nearby?key=70faba-ef2534&lat=" + user_origin_latitude + "&lng=" + user_origin_longitude + "&distance=25";
+                var queryURL = "https://aviation-edge.com/v2/public/nearby?key=70faba-ef2534&lat=" + user_origin_latitude + "&lng=" + user_origin_longitude + "&distance=25";
         
                 $.ajax({
                     url: queryURL,
